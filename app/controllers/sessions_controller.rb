@@ -14,6 +14,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    end_current_session
+    redirect_to root_path
+  end
+
   private
     def session_params
       params.permit(:email, :password)

@@ -36,4 +36,9 @@ module Authentication
   def set_current_session(session)
     Current.session = session
   end
+
+  def end_current_session
+    Current.session.destroy!
+    cookies.delete(:session_token)
+  end
 end
