@@ -1,7 +1,8 @@
 <h1>BankAccounts#index</h1>
 
-<ul>
+<ul id="bank_accounts">
   <%= render @bank_accounts %>
 </ul>
 
-<%= link_to "New bank account", new_bank_account_path %>
+<%= link_to "New bank account", new_bank_account_path, data: { turbo_frame: dom_id(BankAccount.new) } %>
+<%= turbo_frame_tag BankAccount.new %>

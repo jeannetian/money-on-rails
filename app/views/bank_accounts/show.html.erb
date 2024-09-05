@@ -1,13 +1,3 @@
 <h1><%= @bank_account.name %></h1>
 
-<ul>
-  <li>
-    <%= link_to "Edit", edit_bank_account_path(@bank_account) %>
-  </li>
-  <li>
-    <%= button_to "Destroy", bank_account_path(@bank_account), method: :delete, data: { turbo_confirm: "Are you sure?" } %>
-  </li>
-  <li>
-    <%= link_to "Back to bank accounts list", bank_accounts_path %>
-  </li>
-</ul>
+All transactions of this bank account ?
