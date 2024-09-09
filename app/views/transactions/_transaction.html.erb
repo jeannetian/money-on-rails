@@ -1,0 +1,6 @@
+<%= l transaction.date, format: :long %>
+<%= transaction.name %>
+<%= transaction.description %>
+<%= number_to_currency transaction.amount %>
+<%= transaction.bank_account.name %>
+<hr>
