@@ -1,0 +1,18 @@
+<%= form_with model: transaction do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+
+  <%= f.label :bank_account_id, "Bank account" %>
+  <%= f.collection_select :bank_account_id, Current.user.bank_accounts, :id, :name %>
+
+  <%= f.submit %>
+<% end %>

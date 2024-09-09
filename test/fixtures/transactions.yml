@@ -1,0 +1,12 @@
+rent:
+  bank_account: bnp
+  date: 2024-09-06
+  name: Rent
+  amount: 1000
+
+food:
+  bank_account: bnp
+  date: 2024-09-10
+  name: Food
+  description: Food for the party
+  amount: 100
