@@ -1,0 +1,17 @@
+<h1>
+  <%= @category.name %>
+  <%= @category.description %>
+</h1>
+
+
+<ul>
+  <li>
+    <%= link_to "Edit", edit_category_path(@category) %>
+  </li>
+  <li>
+    <%= button_to "Destroy", category_path(@category), method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+  </li>
+  <li>
+    <%= link_to "Back to categories list", categories_path %>
+  </li>
+</ul>

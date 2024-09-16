@@ -12,7 +12,7 @@
   <%= f.number_field :amount %>
 
   <%= f.label :bank_account_id, "Bank account" %>
-  <%= f.collection_select :bank_account_id, Current.user.bank_accounts, :id, :name %>
+  <%= f.collection_select :bank_account_id, Current.user.bank_accounts, :id, :name, prompt: "Select a bank account" %>
 
   <%= f.submit %>
 <% end %>
