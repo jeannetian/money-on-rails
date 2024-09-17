@@ -22,7 +22,7 @@ class BankAccountsControllerTest < ActionDispatch::IntegrationTest
 
   test "#create" do
     assert_difference -> { users(:jeanne).bank_accounts.count }, 1 do
-      post bank_accounts_path, params: { bank_account: { name: "New bank account" } }, as: :turbo_stream
+      post bank_accounts_path, params: { bank_account: { name: "New bank account", balance: 1000 } }, as: :turbo_stream
     end
 
     assert_turbo_stream action: :append, target: "bank_accounts"
