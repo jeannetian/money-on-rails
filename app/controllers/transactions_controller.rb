@@ -41,11 +41,17 @@ class TransactionsController < ApplicationController
 
   private
     def transaction_params
-      params.require(:transaction).permit(:date, :name, :description, :amount).merge(bank_account: bank_account)
+      params.require(:transaction).permit(:date, :name, :description, :amount)
+        .merge(bank_account: bank_account)
+        .merge(category: category)
     end
 
     def bank_account
       Current.user.bank_accounts.find_by(id: params.dig(:transaction, :bank_account_id))
+    end
+
+    def category
+      Current.user.categories.find_by(id: params.dig(:transaction, :category_id))
     end
 
     def set_transaction

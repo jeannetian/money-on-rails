@@ -2,6 +2,9 @@
   <%= f.label :date %>
   <%= f.date_field :date %>
 
+  <%= f.label :category_id, "Category" %>
+  <%= f.collection_select :category_id, Current.user.categories, :id, :name, prompt: "Select a category" %>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 

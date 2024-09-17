@@ -1,4 +1,5 @@
 <%= l transaction.date, format: :long %>
+<%= transaction.category&.name || "Uncategorized" %>
 <%= transaction.name %>
 <%= transaction.description %>
 <%= number_to_currency transaction.amount %>
