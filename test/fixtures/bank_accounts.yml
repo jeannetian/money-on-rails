@@ -1,3 +1,4 @@
 bnp:
-  name: BNP Paribas
   user: jeanne
+  name: BNP Paribas
+  balance: 1000

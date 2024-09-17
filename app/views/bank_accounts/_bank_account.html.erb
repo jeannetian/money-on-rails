@@ -1,6 +1,7 @@
 <%= turbo_frame_tag bank_account do %>
   <li>
     <%= link_to bank_account.name, bank_account, data: { turbo_frame: "_top" } %>
+    <%= number_to_currency bank_account.balance %>
     <%= link_to "Edit", edit_bank_account_path(bank_account) %>
     <%= button_to "Destroy", bank_account_path(bank_account), method: :delete, data: { turbo_confirm: "Are you sure?" } %>
   </li>
