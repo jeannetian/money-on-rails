@@ -1,0 +1,6 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-block-end: 1.5rem;
+}

@@ -1,0 +1,21 @@
+:root {
+  --font-sans-serif: system-ui, sans-serif;
+
+  --line-height-body: 1.5;
+  --line-height-header: 1.1;
+
+  --font-weight-header: 700;
+
+  --color-neutral-background: hsl(45, 29%, 97%);
+
+  --color-base-text-header: hsla(0, 0%, 11%, 1);
+  --color-base-text-body: hsla(0, 0%, 20%, 1);
+  --color-base-text-subtle: hsla(0, 0%, 44%, 1);
+  --color-base-border: hsla(0, 0%, 85%, 1);
+  --color-base-surface: hsla(0, 0%, 98%, 1);
+  --color-base-background: hsla(0, 100%, 100%, 1);
+
+  --color-error-text-body: hsla(4, 57%, 50%, 1);
+  --color-error-border: hsla(359, 78%, 73%, 1);
+  --color-error-background: hsla(0, 67%, 98%, 1);
+}
