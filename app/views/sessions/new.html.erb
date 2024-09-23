@@ -1,11 +1,24 @@
-<h1>Log in</h1>
+<% @skip_navbar = true %>
+<% @body_class = "authentication" %>
 
-<%= form_with url: session_path do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+<div class="authentication__card">
+  <h1 class="h1 text-center authentication__title">
+    Welcome back!
+  </h1>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= tag.div alert, class: "alert alert--error authentication__error-message" if alert.present? %>
 
-  <%= f.submit "Log in" %>
-<% end %>
+  <%= form_with url: session_path, class: "form-group" do |f| %>
+    <div class="input-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "input", placeholder: "your@email.com" %>
+    </div>
+
+    <div class="input-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "input", placeholder: "********" %>
+    </div>
+
+    <%= f.submit "Log in", class: "btn" %>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+.alert {
+  border: solid 1px;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.alert--error {
+  border-color: var(--color-error-border);
+  background-color: var(--color-error-background);
+  color: var(--color-error-text-body);
+}

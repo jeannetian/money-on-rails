@@ -1,0 +1,35 @@
+.authentication {
+  background-color: var(--color-neutral-background);
+  min-block-size: 100svb;
+  margin: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authentication__title {
+  margin-block-end: 2rem;
+}
+
+.authentication__error-message {
+  margin-block-end: 1rem;
+}
+
+.authentication__card {
+  inline-size: 100%;
+  max-inline-size: 25rem;
+  margin-inline: auto;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  border: solid 1px var(--color-base-border);
+  border-radius: 1rem;
+  background-color: var(--color-base-background);
+}
+
+@media (max-width: 25rem) {
+  .authentication__card {
+    border: none;
+    background-color: revert;
+    padding-inline: 0;
+  }
+}
