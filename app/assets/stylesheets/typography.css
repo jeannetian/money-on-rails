@@ -23,3 +23,7 @@ h4, .h4 {
 .text-center {
   text-align: center;
 }
+
+.text-monospace {
+  font-family: var(--font-monospace);
+}

@@ -1,7 +1,26 @@
-<h1>Transactions#index</h1>
+<div class="transactions container">
+  <div class="transactions__header">
+    <h1>Transactions</h1>
+    <%= link_to "New transaction", new_transaction_path, class:"btn" %>
+  </div>
 
-<ul>
-  <%= render @transactions %>
-</ul>
+  <div class="table--responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table__header">DATE</th>
+          <th class="table__header">CATEGORY</th>
+          <th class="table__header">TRANSACTION</th>
+          <th class="table__header">DESCRIPTION</th>
+          <th class="table__header">AMOUNT</th>
+          <th class="table__header">BANK ACCOUNT</th>
+          <th class="table__header table__header--right">ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @transactions %>
+      </tbody>
+    </table>
+  </div>
 
-<%= link_to "Add a new transaction", new_transaction_path %>
+</div>

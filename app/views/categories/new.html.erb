@@ -1,3 +1,11 @@
-<h1>Categories#new</h1>
-
-<%= render "form", category: @category %>
+<%= turbo_frame_tag "dialog" do %>
+  <dialog class="dialog" data-controller="dialog" data-dialog-open-value="true">
+    <div class="dialog__header">
+      <h3>New category</h3>
+      <button data-action="dialog#close">X</button>
+    </div>
+    <div class="dialog__body">
+      <%= render "form", category: @category %>
+    </div>
+  </dialog>
+<% end %>

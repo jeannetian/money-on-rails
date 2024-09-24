@@ -1,0 +1,25 @@
+.categories__header {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-block-end: 2rem;
+}
+
+.categories__list {
+
+}
+
+.category__name {
+  color: var(--color-base-text-body);
+}
+
+.category__description {
+  color: var(--color-base-text-subtle);
+}
+
+.category__actions {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
