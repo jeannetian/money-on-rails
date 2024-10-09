@@ -1,0 +1,45 @@
+.table--responsive {
+  overflow: auto;
+  border: solid 1px var(--color-base-border);
+  border-radius: 0.5rem;
+}
+
+.table {
+  border-collapse: collapse;
+  background-color: var(--color-base-background);
+  inline-size: 100%;
+}
+
+.table thead {
+  background-color: var(--color-base-surface);
+  color: var(--color-base-text-header);
+  border-bottom: solid 1px var(--color-base-border);
+}
+
+.table :is(td, th) {
+  padding: 1rem 1.5rem;
+}
+
+.table tbody tr:hover {
+  background-color: var(--color-base-surface);
+}
+
+.table tr:not(:last-child) {
+  border-bottom: solid 1px var(--color-base-border);
+}
+
+.table__header {
+  text-align: left;
+}
+
+.table__header--right {
+  text-align: right;
+}
+
+.table__cell {
+  text-align: left;
+}
+
+.table__cell--right {
+  text-align: right;
+}

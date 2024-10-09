@@ -1,0 +1,20 @@
+.link {
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  font-weight: 500;
+  color: var(--color-link, var(--color-base-text-body));
+}
+
+.link--danger {
+  --color-link: var(--color-error-text-body);
+}
+
+.link--header {
+  --color-link: var(--color-base-text-header);
+}
+
+.link--active {
+  font-weight: bold;
+}

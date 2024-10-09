@@ -2,3 +2,8 @@ bnp:
   user: jeanne
   name: BNP Paribas
   balance: 1000
+
+citibank:
+  user: jeanne
+  name: Citibank
+  balance: 2000

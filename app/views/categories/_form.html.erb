@@ -1,9 +1,13 @@
-<%= form_with model: category do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_with model: category, id: "categories-form", class: "form-group" do |f| %>
+  <div class="input-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "input" %>
+  </div>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <div class="input-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "input", placeholder: "optional" %>
+  </div>
 
-  <%= f.submit %>
+  <%= f.submit "Create category", class: "btn" %>
 <% end %>

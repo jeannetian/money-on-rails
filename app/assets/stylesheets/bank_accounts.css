@@ -1,0 +1,13 @@
+.bank_accounts__header {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-block-end: 2rem;
+}
+
+.bank_account__actions {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
