@@ -15,7 +15,7 @@ class TransactionsController < ApplicationController
   def create
     @transaction = Current.user.transactions.build(transaction_params)
 
-    if @transaction.save
+    if @transaction.record
       redirect_to transactions_path
     else
       render "new", status: :unprocessable_entity
@@ -26,7 +26,7 @@ class TransactionsController < ApplicationController
   end
 
   def update
-    if @transaction.update(transaction_params)
+    if @transaction.change(transaction_params)
       redirect_to transactions_path
     else
       render "edit", status: :unprocessable_entity
@@ -34,7 +34,7 @@ class TransactionsController < ApplicationController
   end
 
   def destroy
-    @transaction.destroy!
+    @transaction.remove
 
     redirect_to transactions_path
   end
