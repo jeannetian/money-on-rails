@@ -1,2 +1,31 @@
-<h1>Dashboards#show</h1>
-<p>Welcome!</p>
+<div class="container">
+
+<h1>Dashboard</h1>
+<p>Welcome <%= Current.user.email %>!</p>
+
+<h3>Accounts</h3>
+<p><%= link_to "View all", bank_accounts_path %></p>
+<ul>
+  <% @bank_accounts.each do |bank_account| %>
+    <li>
+      <%= bank_account.name %>
+      <div class = "text-monospace"><%= bank_account.balance %></div>
+    </li>
+  <% end %>
+</ul>
+<h4>Total: <%= @bank_accounts.sum(&:balance) %></h4>
+
+
+<h3>Transactions summary</h3>
+<p><%= link_to "View all", transactions_path %></p>
+<ul>
+  <% @transactions.each do |transaction| %>
+    <li>
+      <%= transaction.date %>
+      <%= transaction.name %>
+      <div class = "text-monospace"><%= transaction.amount %></div>
+    </li>
+  <% end %>
+</ul>
+
+</div>

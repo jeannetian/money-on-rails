@@ -1,7 +1,12 @@
-<%= l transaction.date, format: :long %>
-<%= transaction.category&.name || "Uncategorized" %>
-<%= transaction.name %>
-<%= transaction.description %>
-<%= number_to_currency transaction.amount %>
-<%= transaction.bank_account.name %>
-<hr>
+<tr class="transactions__list">
+  <td><%= l transaction.date, format: :long %></td>
+  <td><%= transaction.category&.name || "Uncategorized" %></td>
+  <td><%= transaction.name %></td>
+  <td><%= transaction.description %></td>
+  <td><%= number_to_currency transaction.amount %></td>
+  <td><%= transaction.bank_account.name %></td>
+  <td class="transaction__actions">
+    <%= link_to "Edit", edit_transaction_path(transaction), class: "link" %>
+    <%= button_to "Delete", transaction_path(transaction), method: :delete, class: "link link--danger" %>
+  </td>
+</tr>

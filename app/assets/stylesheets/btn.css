@@ -10,6 +10,7 @@
   font-weight: 500;
   line-height: 1.5rem;
   border: solid 1px transparent;
+  text-decoration: none;
 }
 
 .btn--small {

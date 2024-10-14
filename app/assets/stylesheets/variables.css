@@ -1,5 +1,6 @@
 :root {
   --font-sans-serif: system-ui, sans-serif;
+  --font-monospace: monospace;
 
   --line-height-body: 1.5;
   --line-height-header: 1.1;

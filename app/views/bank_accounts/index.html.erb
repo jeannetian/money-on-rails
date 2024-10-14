@@ -1,8 +1,26 @@
-<h1>BankAccounts#index</h1>
+<div class="container">
+  <div class="bank_accounts__header">
+    <h1>Bank Accounts</h1>
+    <%= link_to "New bank account", new_bank_account_path, class: "btn", data: { turbo_frame: dom_id(BankAccount.new) } %>
+  </div>
 
-<ul id="bank_accounts">
-  <%= render @bank_accounts %>
-</ul>
+  <%= turbo_frame_tag BankAccount.new %>
 
-<%= link_to "New bank account", new_bank_account_path, data: { turbo_frame: dom_id(BankAccount.new) } %>
-<%= turbo_frame_tag BankAccount.new %>
+  <div class="table--responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table__header">BANK ACCOUNT</th>
+          <th class="table__header table__header--right">BALANCE</th>
+          <th class="table__header table__header--right">ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @bank_accounts %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+</div>

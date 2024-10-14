@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-block: 1rem;
+}
+
+.navlinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: auto;
+}

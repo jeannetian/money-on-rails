@@ -1,5 +1,11 @@
-<%= link_to "Home", root_path %>
-<%= link_to "Bank accounts", bank_accounts_path %>
-<%= link_to "Categories", categories_path %>
-<%= link_to "Transactions", transactions_path %>
-<%= button_to "Log out", session_path, method: :delete %>
+<div class="navbar container">
+  <div class="navlinks">
+    <%= link_to "Home", root_path, class: ["link link--header", { "link--active": current_page?(controller: "dashboards", action: "show") }] %>
+    <%= link_to "Bank accounts", bank_accounts_path, class: ["link link--header", { "link--active": current_page?(controller: "bank_accounts") }] %>
+    <%= link_to "Categories", categories_path, class: ["link link--header", { "link--active": current_page?(controller: "categories") }] %>
+    <%= link_to "Transactions", transactions_path, class: ["link link--header", { "link--active": current_page?(controller: "transactions") }] %>
+  </div>
+  <div class="logout">
+    <%= button_to "Log out", session_path, method: :delete, class:"btn" %>
+  </div>
+</div>
