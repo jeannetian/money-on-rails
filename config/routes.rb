@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: "dashboards#show"
 
-  resource :session, only: [ :new, :create, :destroy ]
-  resources :bank_accounts
+  resource :session, only: %i[ new create destroy ]
+  resources :bank_accounts, only: %i[ index new create edit update destroy ]
   resources :transactions
   resources :categories
 

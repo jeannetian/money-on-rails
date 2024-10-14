@@ -1,6 +1,6 @@
 <%= turbo_frame_tag bank_account do %>
   <tr>
-    <td><%= link_to bank_account.name, bank_account, data: { turbo_frame: "_top" } %></td>
+    <td><%= bank_account.name %></td>
     <td class="text-monospace table__cell table__cell--right"><%= number_to_currency bank_account.balance %></td>
     <td class="bank_account__actions">
       <%= link_to "Edit", edit_bank_account_path(bank_account), class: "link" %>

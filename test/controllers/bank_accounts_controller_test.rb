@@ -10,11 +10,6 @@ class BankAccountsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "#show" do
-    get bank_account_path bank_accounts(:bnp)
-    assert_response :success
-  end
-
   test "#new" do
     get new_bank_account_path
     assert_response :success
