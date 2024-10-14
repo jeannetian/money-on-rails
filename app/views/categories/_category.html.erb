@@ -2,7 +2,7 @@
   <td class="category__name"><%= category.name %></td>
   <td class="category__description"><%= category.description %></td>
   <td class="category__actions">
-    <%= link_to "Edit", edit_category_path(category), class: "link" %>
+    <%= link_to "Edit", edit_category_path(category), class: "link", data: { turbo_frame: "dialog" } %>
     <%= button_to "Delete", category_path(category), method: :delete, class: "link link--danger" %>
   </td>
 </tr>

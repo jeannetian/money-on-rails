@@ -9,5 +9,5 @@
     <%= f.text_field :description, class: "input", placeholder: "optional" %>
   </div>
 
-  <%= f.submit "Create category", class: "btn" %>
+  <%= f.submit category.new_record? ? "Create category" : "Edit category", class: "btn" %>
 <% end %>

@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= turbo_refreshes_with method: :morph, scroll: :preserve %>
+    <%= turbo_refreshes_with method: :replace, scroll: :preserve %>
     <%= yield :head %>
 
     <link rel="manifest" href="/manifest.json">
