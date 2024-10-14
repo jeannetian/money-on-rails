@@ -1,21 +1,33 @@
-<%= form_with model: transaction do |f| %>
-  <%= f.label :date %>
-  <%= f.date_field :date %>
+<%= form_with model: transaction, id: "transactions-form", class: "form-group" do |f| %>
+  <div class="input-group">
+    <%= f.label :date %>
+    <%= f.date_field :date, class: "input" %>
+  </div>
 
-  <%= f.label :category_id, "Category" %>
-  <%= f.collection_select :category_id, Current.user.categories, :id, :name, prompt: "Select a category" %>
+  <div class="input-group">
+    <%= f.label :category_id, "Category" %>
+    <%= f.collection_select :category_id, Current.user.categories, :id, :name, prompt: "Select a category", class: "input" %>
+  </div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="input-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "input" %>
+  </div>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <div class="input-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "input" %>
+  </div>
 
-  <%= f.label :amount %>
-  <%= f.number_field :amount %>
+  <div class="input-group">
+    <%= f.label :amount %>
+    <%= f.number_field :amount, class: "input" %>
+  </div>
 
-  <%= f.label :bank_account_id, "Bank account" %>
-  <%= f.collection_select :bank_account_id, Current.user.bank_accounts, :id, :name, prompt: "Select a bank account" %>
+  <div class="input-group">
+    <%= f.label :bank_account_id, "Bank account" %>
+    <%= f.collection_select :bank_account_id, Current.user.bank_accounts, :id, :name, prompt: "Select a bank account", class: "input" %>
+  </div>
 
-  <%= f.submit %>
+  <%= f.submit transaction.new_record? ? "Create transaction" : "Edit transaction", class: "btn" %>
 <% end %>
