@@ -1,5 +1,13 @@
-<h1>BankAccounts#new</h1>
+<%= turbo_frame_tag "dialog" do %>
+  <dialog class="dialog" data-controller="dialog" data-dialog-open-value="true">
+    <div class="dialog__header">
+      <h3>New bank account</h3>
+      <button data-action="dialog#close">X</button>
+    </div>
 
-<%= turbo_frame_tag @bank_account do %>
-  <%= render "form", bank_account: @bank_account %>
+    <div class="dialog__body">
+      <%= render "form", bank_account: @bank_account %>
+    </div>
+  </dialog>
+
 <% end %>

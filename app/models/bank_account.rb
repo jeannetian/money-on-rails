@@ -3,6 +3,7 @@ class BankAccount < ApplicationRecord
   belongs_to :user
 
   validates :name, presence: true
+  validates :balance, presence: true
 
   scope :ordered, -> { order(name: :asc) }
 end

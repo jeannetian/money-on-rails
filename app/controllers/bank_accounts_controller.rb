@@ -13,10 +13,7 @@ class BankAccountsController < ApplicationController
     @bank_account = Current.user.bank_accounts.build(bank_account_params)
 
     if @bank_account.save
-      respond_to do |format|
-        format.html { redirect_to bank_accounts_path, notice: "Bank account was successfully created." }
-        format.turbo_stream
-      end
+      redirect_to bank_accounts_path, notice: "Bank account was successfully created."
     else
       render :new, status: :unprocessable_entity
     end

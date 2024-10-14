@@ -1,10 +1,13 @@
-<%= form_with model: bank_account do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_with model: bank_account, id: "bank-accounts-form", class: "form-group" do |f| %>
+  <div class="input-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "input" %>
+  </div>
 
-  <%= f.label :balance %>
-  <%= f.number_field :balance %>
+  <div class="input-group">
+    <%= f.label :balance %>
+    <%= f.number_field :balance, class: "input" %>
+  </div>
 
-  <%= link_to "Cancel", bank_accounts_path %>
-  <%= f.submit %>
+  <%= f.submit bank_account.new_record? ? "New bank account" : "Edit bank account", class: "btn" %>
 <% end %>
