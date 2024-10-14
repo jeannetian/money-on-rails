@@ -33,10 +33,7 @@ class BankAccountsController < ApplicationController
   def destroy
     @bank_account.destroy!
 
-    respond_to do |format|
-      format.html { redirect_to bank_accounts_path, notice: "Bank account was successfully destroyed." }
-      format.turbo_stream
-    end
+    redirect_to bank_accounts_path, notice: "Bank account was successfully destroyed."
   end
 
   private
