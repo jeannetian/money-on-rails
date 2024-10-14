@@ -3,7 +3,7 @@
     <td><%= bank_account.name %></td>
     <td class="text-monospace table__cell table__cell--right"><%= number_to_currency bank_account.balance %></td>
     <td class="bank_account__actions">
-      <%= link_to "Edit", edit_bank_account_path(bank_account), class: "link" %>
+      <%= link_to "Edit", edit_bank_account_path(bank_account), class: "link", data: { turbo_frame: "dialog" } %>
       <%= button_to "Delete", bank_account_path(bank_account), method: :delete, data: { turbo_confirm: "Are you sure?" }, class:"link link--danger" %>
     </td>
   </tr>
