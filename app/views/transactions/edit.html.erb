@@ -1,3 +1,12 @@
-<h1>Transactions#edit</h1>
+<%= turbo_frame_tag "dialog" do %>
+  <dialog class="dialog" data-controller="dialog" data-dialog-open-value="true">
+    <div class="dialog__header">
+      <h3>Edit transaction</h3>
+      <button data-action="dialog#close">X</button>
+    </div>
 
-<%= render "form", transaction: @transaction %>
+    <div class="dialog__body">
+      <%= render "form", transaction: @transaction %>
+    </div>
+  </dialog>
+<% end %>

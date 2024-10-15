@@ -6,7 +6,7 @@
   <td><%= number_to_currency transaction.amount %></td>
   <td><%= transaction.bank_account.name %></td>
   <td class="transaction__actions">
-    <%= link_to "Edit", edit_transaction_path(transaction), class: "link" %>
+    <%= link_to "Edit", edit_transaction_path(transaction), class: "link", data: { turbo_frame: "dialog" } %>
     <%= button_to "Delete", transaction_path(transaction), method: :delete, class: "link link--danger" %>
   </td>
 </tr>
