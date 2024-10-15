@@ -38,9 +38,9 @@ class BankAccountsControllerTest < ActionDispatch::IntegrationTest
 
   test "#destroy" do
     assert_difference -> { users(:jeanne).bank_accounts.count }, -1 do
-      delete bank_account_path(bank_accounts(:bnp)), as: :turbo_stream
+      delete bank_account_path(bank_accounts(:bnp))
     end
 
-    assert_turbo_stream action: :remove, target: bank_accounts(:bnp)
+    assert_redirected_to bank_accounts_path
   end
 end
