@@ -2,7 +2,7 @@
   <dialog class="dialog" data-controller="dialog" data-dialog-open-value="true">
     <div class="dialog__header">
       <h3>Edit category</h3>
-      <button data-action="dialog#close">X</button>
+      <button class="dialog__close" data-action="dialog#close">×</button>
     </div>
     <div class="dialog__body">
       <%= render "form", category: @category %>

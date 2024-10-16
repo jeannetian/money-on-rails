@@ -18,7 +18,7 @@
   align-items: center;
   background-color: var(--color-base-surface);
   padding-inline: 1rem;
-  padding-block: 1.125rem;
+  padding-block: 0.75rem;
   inline-size: 28rem;
   max-inline-size: 100%;
   border-bottom: solid 1px var(--color-base-border);
@@ -27,4 +27,15 @@
 .dialog__body {
   padding-inline: 1rem;
   padding-block: 1rem;
+}
+
+.dialog__close {
+  display: inline-flex;
+  border: none;
+  padding-inline: 0.5rem;
+  background-color: var(--color-base-surface);
+  color: var(--color-base-text-subtle);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-inline-end: -0.5rem;
 }
