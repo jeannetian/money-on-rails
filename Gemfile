@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 8.0.1"
 
 gem "sqlite3", ">= 1.4"
 gem "redis", ">= 4.0.1"
